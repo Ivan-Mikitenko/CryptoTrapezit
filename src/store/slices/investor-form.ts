@@ -1,4 +1,4 @@
-import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
 	activeSum: 0,
@@ -10,7 +10,7 @@ export const InvestorForm = createSlice({
 	initialState,
 
 	reducers: {
-		addOrder: (state, action: PayloadAction<string>) => {
+		addOrder: () => {
 		},
 	}
 });
