@@ -2,16 +2,16 @@ import { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { NotFound } from '@pages/NotFound/NotFound.tsx';
 import { Loading } from '@components/Loading/Loading.tsx';
-import { Header } from '@pages/Header/Header.tsx';
-import { Menu } from '@pages/Menu/Main.tsx';
-import './styles/App.scss';
+import { Header } from '@pages/Home/Header/Header.tsx';
+import { Menu } from '@pages/Home/Menu/Menu.tsx';
+import { Container } from './styles/container.styles.ts';
 
 function App() {
 	console.log('window', window);
 
 	return (
 		// if(подключен кошелёк)
-		<div>
+		<Container>
 			<Header />
 			<Routes>
 				<Route
@@ -23,7 +23,7 @@ function App() {
 					}></Route>
 				<Route path='*' element={<NotFound />} />
 			</Routes>
-		</div>
+		</Container>
 		// if(НЕ подключен кошелёк)
 	);
 }

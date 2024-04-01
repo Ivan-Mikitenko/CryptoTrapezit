@@ -1,5 +1,3 @@
 export const InvestorForm = () => {
-	return (
-		<>InvestorForm</>
-	)
-}
+	return <>InvestorForm</>;
+};

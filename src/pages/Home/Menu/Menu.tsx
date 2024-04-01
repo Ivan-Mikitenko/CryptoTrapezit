@@ -1,8 +1,6 @@
 import { useEffect } from 'react';
-import { Button } from '@components/Button/Button.tsx';
+import { MenuDefault } from '@pages/Home/Menu/menu.styles.ts';
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
 const tg = window.Telegram.WebApp;
 export const Menu = () => {
 	useEffect(() => {
@@ -14,9 +12,9 @@ export const Menu = () => {
 	};
 
 	return (
-		<>
+		<MenuDefault>
 			<div>Меню</div>
-			<Button onClick={onClose} text={'Закрыть'} />
-		</>
+			{/*<Button onClick={onClose} text={'Закрыть'} />*/}
+		</MenuDefault>
 	);
 };
