@@ -1,22 +1,22 @@
 import { useEffect } from 'react';
+import { Button } from '@components/Button/Button.tsx';
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
-const tg = window.Telegram.WebApp
+const tg = window.Telegram.WebApp;
 export const Menu = () => {
 	useEffect(() => {
-		tg.ready()
-	},[])
+		tg.ready();
+	}, []);
 
 	const onClose = () => {
-		tg.close()
-	}
+		tg.close();
+	};
 
-  return (
+	return (
 		<>
-			<>Меню</>
-			<button onClick={onClose}>Закрыть</button>
+			<div>Меню</div>
+			<Button onClick={onClose} text={'Закрыть'} />
 		</>
-	)
-}
-
+	);
+};
