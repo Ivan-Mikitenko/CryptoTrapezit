@@ -15,10 +15,8 @@ export default defineConfig({
       // '@components': path.resolve(__dirname, './src/components'),
     },
   },
+  base: '/CryptoTrapezit/',
   build: {
-    outDir: 'build',
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
-    base: 'https://ivan-mikitenko.github.io/CryptoTrapezit/'
+    outDir: 'build'
   }
 })
