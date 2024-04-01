@@ -14,9 +14,8 @@ function App() {
     // if(подключен кошелёк)
     <div>
       <Header/>
-      <div>
         <Routes>
-          <Route path='/' element={
+          <Route index element={
             <Suspense fallback={<Loading/>}>
               <Menu/>
             </Suspense>
@@ -24,7 +23,6 @@ function App() {
           </Route>
           <Route path='*' element={<NotFound/>}/>
         </Routes>
-      </div>
     </div>
     // if(НЕ подключен кошелёк)
   )
