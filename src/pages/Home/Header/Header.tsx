@@ -14,12 +14,9 @@ export const Header = () => {
 
 	return (
 		<HeaderMain>
-			<div>имя {tg?.initDataUnsafe?.user?.first_name}</div>
-			<div>фамилия {tg?.initDataUnsafe?.user?.last_name}</div>
-			<div>тег {tg?.initDataUnsafe?.user?.username}</div>
-			<div>код языка {tg?.initDataUnsafe?.user?.language_code}</div>
+			<img src={tg?.initDataUnsafe?.user?.photo_url} alt='Аватар' />
 			<div>
-				<H1></H1>
+				<H1>{tg?.initDataUnsafe?.user?.username}</H1>
 				<Desc></Desc>
 			</div>
 		</HeaderMain>
