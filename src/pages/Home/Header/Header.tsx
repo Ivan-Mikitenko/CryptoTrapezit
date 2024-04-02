@@ -1,7 +1,6 @@
 import { HeaderMain } from '@pages/Home/Header/header.styles.ts';
 import { Desc, H1 } from '../../../styles/text.styles.ts';
 import { TonConnectButton, useTonWallet } from '@tonconnect/ui-react';
-import { TonConnectModal } from '@components/TonConnectModal/TonConnectModal.tsx';
 import { connector } from '../../../../connector.ts';
 import { useEffect } from 'react';
 
@@ -14,7 +13,7 @@ export const Header = () => {
 		() =>
 			console.log(
 				'connector',
-				connector.getWallets().then(res => res)
+				connector.getWallets().then(res => console.log('res', res))
 			),
 		[]
 	);
@@ -27,7 +26,7 @@ export const Header = () => {
 	return (
 		<HeaderMain>
 			{/*<img src={tg?.initDataUnsafe?.user?.photo_url} alt='Аватар' />*/}
-			<TonConnectModal />
+			<TonConnectButton />
 			<div>
 				<H1>{tg?.initDataUnsafe?.user?.username}</H1>
 				<Desc></Desc>
