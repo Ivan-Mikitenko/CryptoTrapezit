@@ -13,7 +13,7 @@ function App() {
 	return (
 		// if(подключен кошелёк)
 		<TonConnectUIProvider
-			manifestUrl='https://https://ivan-mikitenko.github.io/CryptoTrapezit/tonconnect-manifest.json'
+			manifestUrl='https://ivan-mikitenko.github.io/CryptoTrapezit/tonconnect-manifest.json'
 			actionsConfiguration={{
 				twaReturnUrl: 'https://t.me/CryptoTrapezitBot'
 			}}>
