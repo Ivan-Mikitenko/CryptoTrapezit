@@ -1,5 +1,5 @@
 {
-	"name": "CryptoTrapezit",
+	"name": "cryptotrapezit",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
@@ -12,6 +12,7 @@
 	},
 	"dependencies": {
 		"@reduxjs/toolkit": "^2.2.2",
+		"@tonconnect/sdk": "^3.0.0",
 		"@tonconnect/ui-react": "^2.0.0",
 		"bootstrap": "^5.3.3",
 		"gh-pages": "^6.1.1",
