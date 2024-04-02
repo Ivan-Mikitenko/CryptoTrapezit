@@ -6,7 +6,7 @@ const tg = window.Telegram.WebApp;
 export const Header = () => {
 	const id = tg?.initDataUnsafe?.user;
 
-	console.log('user', id);
+	console.log('user', id?.user);
 
 	console.log('first_name', tg?.initDataUnsafe?.user?.first_name);
 	console.log('last_name', tg?.initDataUnsafe?.user?.last_name);
