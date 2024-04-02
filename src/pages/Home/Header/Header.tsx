@@ -1,5 +1,6 @@
 import { HeaderMain } from '@pages/Home/Header/header.styles.ts';
 import { Desc, H1 } from '../../../styles/text.styles.ts';
+import { TonConnectButton } from '@tonconnect/ui-react';
 
 const tg = window.Telegram.WebApp;
 export const Header = () => {
@@ -14,7 +15,8 @@ export const Header = () => {
 
 	return (
 		<HeaderMain>
-			<img src={tg?.initDataUnsafe?.user?.photo_url} alt='Аватар' />
+			{/*<img src={tg?.initDataUnsafe?.user?.photo_url} alt='Аватар' />*/}
+			<TonConnectButton />
 			<div>
 				<H1>{tg?.initDataUnsafe?.user?.username}</H1>
 				<Desc></Desc>
