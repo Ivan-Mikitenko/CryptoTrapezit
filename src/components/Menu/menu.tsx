@@ -1,4 +1,4 @@
-import { myTransaction } from '../../../controller/transaction.const.ts';
+import { myTransaction } from '../../../transaction/transaction.const.ts';
 import { Button, Flex, Text } from '@chakra-ui/react';
 import { useTonConnectUI } from '@tonconnect/ui-react';
 
