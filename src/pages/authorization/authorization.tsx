@@ -1,14 +1,14 @@
-import React from 'react';
-import { Navigate, Outlet } from 'react-router-dom';
-import { Flex, FormHelperText, Text } from '@chakra-ui/react';
+import { Text } from '@chakra-ui/react';
 import { TonConnectButton, useTonWallet } from '@tonconnect/ui-react';
+import { Outlet } from 'react-router-dom';
+import { FlexCustom } from './authorization.styles';
 
 export const Authorization = () => {
 	const wallet = useTonWallet();
 
 	if (!wallet) {
 		return (
-			<Flex
+			<FlexCustom
 				height='100vh'
 				justifyContent='center'
 				alignItems='center'
@@ -21,7 +21,7 @@ export const Authorization = () => {
 					Это безопасно 🙏🏼
 				</Text>
 				<TonConnectButton />
-			</Flex>
+			</FlexCustom>
 		);
 	}
 

@@ -1,11 +1,13 @@
+import { ChakraProvider } from '@chakra-ui/react';
+import { TonConnectUIProvider } from '@tonconnect/ui-react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 import App from './App.tsx';
 import { store } from './store/store.ts';
 import { GlobalStyle } from './styles/app.styles.ts';
-import { TonConnectUIProvider } from '@tonconnect/ui-react';
-import { ChakraProvider } from '@chakra-ui/react';
+import { theme } from './styles/theme.ts';
 
 const rootElement = document.getElementById('root');
 
@@ -21,8 +23,10 @@ if (rootElement) {
 						actionsConfiguration={{
 							twaReturnUrl: 'https://t.me/CryptoTrapezitBot'
 						}}>
-						<GlobalStyle />
-						<App />
+						<ThemeProvider theme={theme}>
+							<GlobalStyle />
+							<App />
+						</ThemeProvider>
 					</TonConnectUIProvider>
 				</ChakraProvider>
 			</Provider>

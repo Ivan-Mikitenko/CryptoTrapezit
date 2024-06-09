@@ -52,7 +52,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: var(--tg-theme-bg-color);
-    color: var(--tg-theme-text-color);
+    background-color: ${({ theme }) => theme.secondaryBgColor};
+    color: ${({ theme }) => theme.textColor};
   }
 `;
